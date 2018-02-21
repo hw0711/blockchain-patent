@@ -1,18 +1,14 @@
-# blockchain-patent
-blockchain-patent.com
-
+# Blockchain-patent
 
 <html>
 <head>
-  <h2>Blockchain-patent</h2>
-
-
+Will be opened in 2018 Q2 :)  
 </head>
 
 <Body>
   Research on Blockchain patent field <br>
-  Making fortpolios in Blockchain field
-
-
+  Making portfolios in Blockchain patent field <br>
+  Blockchain with IoT <br>
+  Contact: haewon0711@gmail.com
 
 </Body>
