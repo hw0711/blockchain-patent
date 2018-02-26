@@ -1,5 +1,6 @@
 <html>
 <head>
+  <title> Blockchain-patent</title>
   <h1>All about patents in Blockchain field </h1>
   <h2>by Blockchain Patent Laboratory </h2>
   
