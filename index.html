@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title> Project-B </title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/naptha/tesseract.js@v1.0.14/dist/tesseract.min.js">
+    </script>
+</head>
+
+<body>
+    <h1>
+      유방암 조직검사결과 OCR test page
+    </h1>
+    <!-- <image src = "sample.jpg"> -->
+    <input type="text" id="url" placeholder="Image URL" />
+    <input type="button" id="go_button" value="Run" />
+    <div id="ocr_results"> </div>
+    <div id="ocr_status"> </div>
+
+
+    <!-- <img id="myImage" src="sample.jpg" style="width:1000px"> -->
+
+    <script>
+
+    function runOCR(url) {
+        Tesseract.recognize(url)
+             .then(function(result) {
+                document.getElementById("ocr_results")
+                        .innerText = result.text;
+             }).progress(function(result) {
+                document.getElementById("ocr_status")
+                        .innerText = result["status"] + " (" +
+                            (result["progress"] * 100) + "%)";
+            });
+    }
+    document.getElementById("go_button")
+            .addEventListener("click", function(e) {
+                var url = document.getElementById("url").value;
+                runOCR(url);
+            });
+
+    // var ocrResult = "일반혈액 검사명ALC (Absolute Lymphocyte Count) (단위 : x10³/μL)결과1.43";
+    // document.write(ocrResult);
+
+
+   </script>
+
+</body>
+</html>
