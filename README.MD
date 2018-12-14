@@ -1,16 +1,39 @@
+<!doctype html>
 <html>
-  <head>
-    <title> Blokchain patents </title>
+<head>
+    <title> 조직검사결과 제공 test page </title>
     <meta charset="utf-8">
-  </head>
-  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/naptha/tesseract.js@v1.0.14/dist/tesseract.min.js">
+    </script>
+</head>
 
-<h1>Purpose of this project</h1>
-<ul>
-<li> self-educating for making webservice  </li>
-<li> giving info about blockchain patents  </li>
-</ul>
+<body>
+    <h1>
+      유방암 조직검사결과 제공을 위한 test page
+    </h1>
+    <!-- <image src = "sample.jpg"> -->
+
+    <img id="myImage" src="sample.jpg" style="width:1000px">
 
 
-  </body>
+    <script>
+
+    var ocrResult = "일반혈액 검사명ALC (Absolute Lymphocyte Count) (단위 : x10³/μL)결과1.43";
+
+    document.write(ocrResult);
+
+
+    document.getElementById("myImage").src = "sample.jpg";
+
+    var Tesseract = require('tesseract.js')
+    Tesseract.recognize(myImage)
+    .then(function(result){
+    console.log(result)
+})
+
+   </script>
+
+</body>
 </html>
