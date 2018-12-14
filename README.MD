@@ -1,4 +1,3 @@
-<!doctype html>
 <html>
 <head>
     <title> 조직검사결과 제공 test page </title>
@@ -13,27 +12,6 @@
     <h1>
       유방암 조직검사결과 제공을 위한 test page
     </h1>
-    <!-- <image src = "sample.jpg"> -->
-
-    <img id="myImage" src="sample.jpg" style="width:1000px">
-
-
-    <script>
-
-    var ocrResult = "일반혈액 검사명ALC (Absolute Lymphocyte Count) (단위 : x10³/μL)결과1.43";
-
-    document.write(ocrResult);
-
-
-    document.getElementById("myImage").src = "sample.jpg";
-
-    var Tesseract = require('tesseract.js')
-    Tesseract.recognize(myImage)
-    .then(function(result){
-    console.log(result)
-})
-
-   </script>
-
+    <a>main.html</a>
 </body>
 </html>
